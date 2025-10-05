@@ -27,9 +27,8 @@ Currently, these elements exist in separate systems (email updates, spreadsheets
 3. **Learning** from user corrections to improve accuracy over time
 4. **Reporting** organized bullet points and data summaries for PMs to refine into final reports along with financial reports by funder and by project
 
-**Philosophy**: Automate the tedious collection and organization work (80%), preserve PM judgment and expertise for final report crafting (20%).
+**Philosophy**: Reporting and accountability are important but it can and should be simpler. Automate the tedious collection and organization work (80%), preserve PM judgment and expertise for final report crafting (20%).
 
----
 
 ## Minimum Viable Product - Class Project Scope
 
@@ -152,8 +151,6 @@ For each funder (tabs or sections for each option? could just have one budget). 
 
 **PM role:** Takes organized bullets and data summaries, crafts into polished narrative reports tailored to each funder's requirements.
 
----
-
 ## Database Schema (PostgreSQL)
 
 ### Core Tables
@@ -241,8 +238,6 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - actual_category
 - created_timestamp
 
----
-
 ## Basic Front-End (Class Project)
 
 ### Required Views
@@ -302,8 +297,6 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - **Frontend**: ?
 - **AI/NLP**: ?
 
----
-
 ## Workflow Summary
 
 ### Setup (Once):
@@ -323,8 +316,6 @@ For each funder (tabs or sections for each option? could just have one budget). 
 2. System generates organized bullets with relevant costs
 3. PM refines into final report
 
----
-
 ## Long-Term Vision
 
 ### Phase 1: Protoype, MVP, Class Project
@@ -343,8 +334,6 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - First PM tool integration (Asana)
 - Predictive analytics
 - Other?
-
----
 
 ## Class Project Deliverables
 
