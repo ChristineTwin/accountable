@@ -175,6 +175,7 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - funder_id (FK)
 - total_amount (this funder's total contribution)
 - award_number
+- report deadlines? added this, need to add to front end. might need to make this a different table
 
 **deliverable**
 - deliverable_id (PK)
