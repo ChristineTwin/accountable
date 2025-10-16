@@ -41,5 +41,8 @@ Currently, these elements exist in separate systems (email updates, spreadsheets
 ### Database Design
 - An E-R Diagram of the conceptual design for the database which you will be using for the project. This diagram should contain attributes, entities, relationships, multiplicity, and the primary keys for the entities. You can use any diagramming tool you prefer. One that is freely available is https://erdplus.com/. You should plan on using this diagram during your class project presentation as well as in your final project write-up (where it will be graded more strictly and worth more points).
 
+First pass of ERD, not exactly like described in readme. review changes and complexity.
+![Draft ERD]('/accountable_erd_101625')
+
 ### User Workflow
 - A brief step-by-step user interaction of your application. The description should list the steps a user would be required to perform to use your application. A flow chart is sufficient.
