@@ -3,9 +3,9 @@
 ## Proposal
 
 ### Team Members
-Christine Voyer
-Ian Duggan
-Alison Avery
+Christine Voyer  
+Ian Duggan  
+Alison Avery  
 
 ### Project Description
 The longterm idea is to build an AI-powered grant management platform that synthesizes weekly narrative reports and personel hours tracking into organized draft report materials and budget reports.
@@ -48,4 +48,4 @@ Technologies:
 ![Draft ERD](./accountable_erd_101625.png)
 
 ### User Workflow
-- A brief step-by-step user interaction of your application. The description should list the steps a user would be required to perform to use your application. A flow chart is sufficient.
+![Draft Workflow](./workflow_v1.png)
