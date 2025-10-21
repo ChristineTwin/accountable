@@ -1,16 +1,11 @@
 # Task 1 - Project Proposal
-## Project Requirements for Reference
-- The project must be able to create, read, update and delete data from the chosen database. The executed operations should be driven from user input.
-- The user interface for the project may be a simple command line argument project, a web page or a GUI-based project. The user interface provides access to the database and determines the operations that are executed on the data. If you are working on another front-end project for another course, these could be combined.
-- The basic assumption is that your project will use PostgreSQL as your DBMS. If you plan to use a NoSQL database or a different relational database, you must specify which database you are using in this proposal. We will work with you to define a corresponding grading rubric for your project. The teaching team will need to approve your NoSQL database choice. Seeking that approval early will provide a greater likelihood of success
-in the later components of the project.
-- The project must demonstrate your mastery of the chosen database model (relational, document, key value, columnar etc.)
-- The final result is an application that demonstrates your ability to code a system using a database as its storage mechanism as well as your ability to document the system.
 
 ## Proposal
 
 ### Team Members
 Christine Voyer
+Ian Duggan
+Alison Avery
 
 ### Project Description
 The longterm idea is to build an AI-powered grant management platform that synthesizes weekly narrative reports and personel hours tracking into organized draft report materials and budget reports.
@@ -34,14 +29,22 @@ Managing federal awards and similar funding requires tracking:
 
 Currently, these elements exist in separate systems (email updates, spreadsheets, accounting software, project management tools, development databases). Project managers and other organization staff spend hours manually synthesizing information into reports.
 
-### Technical Overview
-- SQL vs. NoSQL storage
-- Software, Apps, Languages, Libraries and hardware that will be used to develop the project. Are there any machine restrictions for the project?
+### Technical Overview Tentative plans
+#### Backend
+Runtime Environment: Node.js  
+API Architecture: RESTful API design pattern  
+Server Framework: Express.js  
+Database: PostgreSQL   
+ 
+#### Frontend
+Build Tool: Vite   
+Technologies:  
+* HTML for structure  
+* CSS for styling  
+* Bootstrap framework for UI components  
+* Vanilla JavaScript   
 
 ### Database Design
-- An E-R Diagram of the conceptual design for the database which you will be using for the project. This diagram should contain attributes, entities, relationships, multiplicity, and the primary keys for the entities. You can use any diagramming tool you prefer. One that is freely available is https://erdplus.com/. You should plan on using this diagram during your class project presentation as well as in your final project write-up (where it will be graded more strictly and worth more points).
-
-First pass of ERD, not exactly like described in readme. review changes and complexity.
 ![Draft ERD](./accountable_erd_101625.png)
 
 ### User Workflow
