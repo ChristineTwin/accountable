@@ -8,10 +8,10 @@ Ian Duggan
 Alison Avery  
 
 ### Project Description
-The longterm idea is to build an AI-powered grant management platform that synthesizes weekly narrative reports and personel hours tracking into organized draft report materials and budget reports.
+The longterm vision for this product is an AI-powered grant management platform that synthesizes weekly narrative reports and personnel hours tracking into organized draft report materials and budget reports. For this course, we will generate
 
 #### Purpose and Rationale
-Before coming to the Roux, I had worked for 12 years at a medium sized non-profit as a program manager. Managing the reporting and budget tracking working with budgets composed with funds from across a patchwork of funding sources, from tiny local foundations to large federal agencies was a huge time sink, even in an organization with significant capacity in accounting and development. In addition, the many systems used across the many departments to track progress and spending were rarely aligned, and the tools and systems were largely siloed. 
+ The idea of a grant management tool was interesting to all team members because we have worked in context that include grant funding and associated reporting and management. Managing the reporting and budget tracking working with budgets composed with funds from across a patchwork of funding sources, from tiny local foundations to large federal agencies was a huge time sink, even in an organization with significant capacity in accounting and development. In addition, the many systems used across the many departments to track progress and spending were rarely aligned, and the tools and systems were largely siloed. 
 
 Funder reporting requirements may be seen as a burden (federal reporting requirements especiall), but the solution isn't less accountability. The solution is better (fewer) tools. Funders deserve to know their money is being spent appropriately and achieving outcomes and/or contributing new knowledge. The burden comes from using disconnected systems that create manual work and friction points. I am proposing a tool that puts everything in one place and leverages already existing tools like task management tools and weekly check ins to quickly capture the relevant information about the work.
 
@@ -48,4 +48,4 @@ Technologies:
 ![Draft ERD](./accountable_erd_101625.png)
 
 ### User Workflow
-![Draft Workflow](./workflow_v1.png)
+![Draft Workflow](./workflow_v2.png)
