@@ -43,7 +43,6 @@ Notes:
 - UNIQUE (project_id, funder_id)
 - CHECK (end_date IS NULL OR end_date > start_date)
 
-
 ### budget_categories (reference table - shared codes)
 | Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description             |
 |-----------------|--------------|------|------------------------------------|-------|-------------------------|
@@ -66,58 +65,6 @@ Notes:
 | category_id     | INTEGER      | FK   | NOT NULL, budget_categories(category_id) | Y | References budget category |
 | funder_id       | INTEGER      | FK   | NOT NULL, funder(funder_id)        | Y     | References funder table |
 | description     | TEXT         | -    |                                    | N     | Optional additional notes |
-
-### person_line
-| Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description             |
-|-----------------|--------------|------|------------------------------------|-------|-------------------------|
-| person_line_id  | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier       |
-| budget_line_id  | INTEGER      | FK   | NOT NULL, budget_line(budget_line_id) | Y  | References budget line  |
-| person_id       | INTEGER      | FK   | NOT NULL, personnel(person_id)     | Y     | References personnel    |
-| amount          | DECIMAL(12,2)| -    | NOT NULL, CHECK (amount >= 0)      | N     | Amount for this person  |
-| description     | TEXT         | -    |                                    | N     | Role/position description |
-
-### line_items
-| Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description         |
-|-----------------|--------------|------|------------------------------------|-------|---------------------|
-| line_item_id    | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier   |
-| budget_line_id  | INTEGER      | FK   | NOT NULL, budget_line(budget_line_id) | Y  | References budget line |
-| description     | VARCHAR(100) | -    | NOT NULL                           | N     | Line item description |
-| amount          | DECIMAL(12,2)| -    | NOT NULL, CHECK (amount >= 0)      | N     | Line item amount    |
-
-### budget
-| Attribute       | Data Type    | PK/FK| Constraints                | Index | Description             |
-|-----------------|--------------|------|----------------------------|-------|-------------------------|
-| budget_id       | SERIAL       | PK   | NOT NULL, UNIQUE           | Y     | Unique identifier       |
-| project_id      | INTEGER      | FK   | NOT NULL, project(proj_id) | Y     | References project table|
-| notes           | TEXT         | -    |                            | N     | Budget notes            |
-
-### budget_categories (reference table - shared codes)
-| Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description             |
-|-----------------|--------------|------|------------------------------------|-------|-------------------------|
-| category_id     | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier       |
-| code            | VARCHAR(20)  | -    | NOT NULL, UNIQUE                   | Y     | Budget code (e.g., "PERS", "EQUIP") |
-| description     | VARCHAR(100) | -    | NOT NULL                           | N     | Category description (e.g., "Personnel Costs") |
-
-- not in original ERD but I think it should be
-
-### budget
-| Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description         |
-|-----------------|--------------|------|------------------------------------|-------|---------------------|
-| budget_id       | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier   |
-| project_id      | INTEGER      | FK   | NOT NULL, project(proj_id)         | Y     | References project table |
-| notes           | TEXT         | -    |                                    | N     | Budget notes or description |
-
-### budget_line
-| Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description             |
-|-----------------|--------------|------|------------------------------------|-------|-------------------------|
-| budget_line_id  | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier       |
-| budget_id       | INTEGER      | FK   | NOT NULL, budget(budget_id)        | Y     | References budget table |
-| category_id     | INTEGER      | FK   | NOT NULL, budget_categories(category_id) | Y | References budget category |
-| funder_id       | INTEGER      | FK   | NOT NULL, funder(funder_id)        | Y     | References funder table |
-| description     | TEXT         | -    |                                    | N     | Optional additional notes |
-
-- link budgets, categories, and line items/personnel lines
-- can query to sum amounts per category for all or some funders, etc
 
 ### personnel
 | Attribute         | Data Type    | PK/FK| Constraints                        | Index | Description         |
@@ -133,7 +80,6 @@ Notes:
 - Future implementation adds role entity and then adds FK to personnel table  
 | role_id           | INTEGER      | FK   | classifications(classification_id) | Y     | Personnel role      |
 
-
 ### person_line
 | Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description             |
 |-----------------|--------------|------|------------------------------------|-------|-------------------------|
@@ -141,7 +87,7 @@ Notes:
 | budget_line_id  | INTEGER      | FK   | NOT NULL, budget_line(budget_line_id) | Y  | References budget line  |
 | person_id       | INTEGER      | FK   | NOT NULL, personnel(person_id)     | Y     | References personnel    |
 | amount          | DECIMAL(12,2)| -    | NOT NULL, CHECK (amount >= 0)      | N     | Amount for this person  |
-| description     | TEXT         | -    |                                    | N     | Role on project description |
+| description     | TEXT         | -    |                                    | N     | Role/position description |
 
 ### line_items
 | Attribute       | Data Type    | PK/FK| Constraints                        | Index | Description         |
