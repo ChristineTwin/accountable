@@ -55,4 +55,156 @@ The user should be allowed to add 1-N items, with a button like "Add another act
 
 ## 3. Form Layout and UX Structure
 
-in progress...
+The Weekly Report Entry form is composed of two major sections:
+
+1. Report Header (Parent Record)
+
+
+- Contains project selection
+
+- Displays reporter’s identity (auto-filled)
+
+- Captures no other user-editable fields
+
+
+2. Activity Item Entries (Child Records)
+
+- Each activity includes hours worked and a narrative description
+
+- Users may add 1–N activity items
+
+- Items can be added or removed dynamically
+
+The layout below is intended as a suggested design specification for the front-end and describes the required structure, grouping, and interactive behavior.
+
+### 3.1 High-Level Page Structure
+
+**Page Layout**
+
+- **Weekly Report — New Entry**
+- **Section A — Project Information**
+- **Section B — Activity Entries (1–N items)**
+- **Submit Button**
+
+The page should be simple, uncluttered, and optimized for fast weekly use.
+
+### 3.2 Section A — Project Information (Parent Record)
+
+| Label        | Type              | Notes                                                         |
+| ------------ | ----------------- | ------------------------------------------------------------- |
+| **Project**  | Dropdown          | Populated via `/api/projects`; required                       |
+| **Reporter** | Display-only text | Pulled from authenticated session (`person_id`); not editable |
+
+#### Behavior Notes
+
+- Project dropdown must be selected before submitting.
+
+- Reporter name should display to reassure user they are logged in and reporting as the correct person.
+
+### 3.3 Section B — Activity Entries (Repeatable 1–N Items)
+
+Each activity item block includes:
+
+### 3.3.1 Fields
+
+| Label                             | Type                            | Notes                 |
+| --------------------------------- | ------------------------------- | --------------------- |
+| **Hours Worked**                  | Numeric input (decimal allowed) | Required; must be > 0 |
+| **Description of Work Completed** | Multi-line textbox              | Required              |
+
+### 3.3.2 Layout Example
+
+Activity Item #1
+-----------------------------------------
+ Hours Worked:     [   2.5   ]
+ Description:
+ [ Reviewed raw survey data and cleaned records
+   for project dataset. ]
+
+ [ Remove this activity ] (button)
+-----------------------------------------
+
+[ + Add another activity ] (button)
+
+### 3.3.3 Behavior Notes
+
+- Users must always have at least one activity entry.
+
+- Each click on Add another activity appends a new activity block.
+
+- Each activity block includes a Remove button, except when only one block remains.
+
+- When the user submits:
+
+  - The system creates 1 parent row (weekly_report)
+
+  - Then creates N child rows (w_report_item)
+
+### 3.4 Buttons and Considerations
+
+#### Add Another Activity
+
+- Appends a new blank activity block.
+
+- Should scroll into view or auto-focus the first input.
+
+#### Remove Activity
+
+- Removes an activity item.
+
+- Disabled or hidden if only one item remains.
+
+#### Submit Weekly Report
+
+- Validates all fields.
+
+- Sends:
+
+1. POST /api/weekly-reports
+
+2. POST /api/weekly-reports/:id/items for each item
+
+#### Cancel / Return to Dashboard (optional)
+
+- Returns the user to project dashboard without submitting.
+
+### 3.5 Example Rough Mockup
+
+--------------------------------------------------------
+ Weekly Report — New Entry
+--------------------------------------------------------
+
+ Project: [ Select Project ▼ ]
+ Reporter: Ian Duggan (auto-filled)
+
+--------------------------------------------------------
+ Activity Item 1
+--------------------------------------------------------
+ Hours Worked: [  2.0  ]
+ Description:
+ [ Completed preliminary data cleaning and
+   drafted summary notes for PI.              ]
+
+ [ Remove activity ]
+--------------------------------------------------------
+
+ [ + Add another activity ]
+
+--------------------------------------------------------
+ [   Submit Weekly Report   ]
+--------------------------------------------------------
+
+### 3.6 UX Considerations & Recommendations
+
+Large textboxes should auto-expand or provide adequate height.
+
+Decimal input for hours should allow values like 0.25, 1.5, 7.75, etc.
+
+Activity descriptions should provide placeholder guidance like:
+“Describe what you accomplished for this work period…”
+
+If validation fails, errors should appear inline beside the fields.
+
+## Step 4 — Validation Requirements
+
+in progress....
