@@ -140,6 +140,9 @@ Notes:
 | text                   | TEXT         | -      | NOT NULL                              | N     | Activity description      |
 
 
+--- 
+Don't build this out yet, since we aren't implementing the AI functionality yet.
+
 ### classifications
 | Attribute              | Data Type    | PK/FK  | Constraints                           | Index | Description               |
 |------------------------|--------------|--------|---------------------------------------|-------|---------------------------|

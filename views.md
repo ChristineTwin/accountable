@@ -1,5 +1,7 @@
 # Draft Views
 
+- Views will serve as current basic analytics layer for the proposed data management system.
+
 ## budget_line_summary
 Purpose: Calculate total amounts for each budget line from person_line and line_items
 Tables used: budget_line, person_line, line_items

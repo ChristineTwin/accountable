@@ -294,8 +294,8 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - Can also generate project-wide reports (all funders)
 
 ### Technology Stack
-- **Backend**: ? + PostgreSQL
-- **Frontend**: ?
+- **Backend**: Node.js, Express, PostgreSQL
+- **Frontend**: 
 - **AI/NLP**: ?
 
 ## Workflow Summary
@@ -336,7 +336,7 @@ For each funder (tabs or sections for each option? could just have one budget). 
 - Predictive analytics
 - Other?
 
-## Class Project Deliverables
+## Class Project - Data Mgt System
 
 1. **Database Design**
    - Complete schema with per-funder budgets
@@ -347,16 +347,20 @@ For each funder (tabs or sections for each option? could just have one budget). 
 2. **Functional Web Application**
    - Project setup with dynamic per-funder budgets
    - Weekly report entry
-   - Classification review
-   - Dashboard and reporting
+   - Dashboard and reporting (Stretch goal)
 
-3. **AI/NLP Component** 
-   - Maybe start this??
-   - Text processing and mapping
-   - Learning from corrections
-   - Demonstrates improvement
+## Future Enhancements
+### Classification System (AI)
+- Automatic classification of weekly report activities to deliverables
+- Machine learning model trained on verified classifications
+- Project manager review and correction workflow
 
-4. **Documentation**
-   - Design rationale
-   - Use cases
-   - Future roadmap
+### Possible Advanced Analytics Layer
+- **AI-Assisted Report Writing**: Generate outlines for funder reports automatically from project data
+- **Funder Analysis**: Match projects to potential funders based on historical success
+    - This would require tracking what funders did not fund as well.
+- **Outcome Prediction**: Predict project completion times and budget variances
+- **Trend Analysis**: Identify patterns in funding success, project performance, effort analysis for types of outcomes
+
+
+
