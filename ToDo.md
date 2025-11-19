@@ -119,9 +119,9 @@
     /sql - Store sql queries
 
 ### Major Task 2: Database Setup - Due: Nov 15
-- [ ] Install PostgreSQL (if not already installed)
-- [ ] Create database in PostgreSQL (CREATE DATABASE accountable_db;)
-- [ ] Create schema.sql file
+- [x] Install PostgreSQL
+- [x] Create database in PostgreSQL (CREATE DATABASE accountable_db;)
+- [x] Create schema.sql file
     Refer to schema.md file, CREATE TABLE statements:
     - project
     - funder
@@ -139,7 +139,7 @@
     - w_report_item
     - classifications (for AI)
     - report
-- [ ] Run schema.sql to create all tables
+- [x] Run schema.sql to create all tables
 - [ ] Create seed data file seed.sql - Scott gave ok to use an LLM to make seed data
 - [ ] Run seed data
 

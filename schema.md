@@ -18,14 +18,17 @@ Notes:
 
 **Table Constraints:**
 - CHECK (end_date IS NULL OR end_date > start_date)
+- Future step would be to constrain status or have a table of status values
 
 ### funder
 | Attribute      | Data Type    | PK/FK| Constraints                        | Index | Description         |
 |----------------|--------------|------|------------------------------------|-------|---------------------|
 | funder_id      | SERIAL       | PK   | NOT NULL, UNIQUE                   | Y     | Unique identifier   |
-| name           | VARCHAR(100) | -    | NOT NULL, UNIQUE                   | Y     | Funder name         |
+| funder_name    | VARCHAR(100) | -    | NOT NULL, UNIQUE                   | Y     | Funder name         |
 | funder_type    | VARCHAR(50)  | -    | NOT NULL, Fed, State,Foundation, Corporate| N | Type of funding organization |
 | notes          | TEXT         | -    |                                    | N     | Notes about funder  |
+
+- Future step would be to constrain funder_type or have a table of funder_type values
 
 ### project_funder
 | Attribute       | Data Type    | PK/FK| Constraints                         | Index | Description              |
